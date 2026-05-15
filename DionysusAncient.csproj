@@ -59,12 +59,6 @@
         <None Include="DionysusAncient/**"/>
     </ItemGroup>
 
-    <ItemGroup>
-        <Folder Include="DionysusAncient\images\card_portraits\big\"/>
-        <Folder Include="DionysusAncient\images\powers\big\"/>
-        <Folder Include="DionysusAncient\images\relics\big\"/>
-    </ItemGroup>
-
     <Target Name="CheckDependencyPaths">
         <Error
                 Text=" Slay the Spire 2 data not found at path '$(Sts2DataDir)'"

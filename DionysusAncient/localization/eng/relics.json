@@ -1,4 +1,13 @@
 {
+  "DIONYSUSANCIENT-DRUNKEN_DASH.title": "Drunken Dash",
+  "DIONYSUSANCIENT-DRUNKEN_DASH.description": "Choose [blue]{Cards}[/blue] Skills in your [gold]Deck[/gold]. [gold]Enchant[/gold] them with [purple]Intoxicate[/purple] [blue]{Intoxicate}[/blue].",
+  "DIONYSUSANCIENT-DRUNKEN_DASH.flavor": "",
+  "DIONYSUSANCIENT-DRUNKEN_STUPOR.title": "Drunken Stupor",
+  "DIONYSUSANCIENT-DRUNKEN_STUPOR.description": "Whenever you play a Power card, apply [blue]{HangoverPower}[/blue] [gold]Hangover[/gold] to ALL enemies.",
+  "DIONYSUSANCIENT-DRUNKEN_STUPOR.flavor": "",
+  "DIONYSUSANCIENT-HIGH_TOLERANCE.title": "High Tolerance",
+  "DIONYSUSANCIENT-HIGH_TOLERANCE.description": "Gain {Energy:energyIcons()} at the start of each turn. At the start of combat, gain [blue]{HangoverPower}[/blue] [gold]Hangover[/gold].",
+  "DIONYSUSANCIENT-HIGH_TOLERANCE.flavor": "",
   "DIONYSUSANCIENT-TIPSY_SHOT.title": "Tipsy Shot",
   "DIONYSUSANCIENT-TIPSY_SHOT.description": "Whenever you use a potion, its effect is applied an additional time.",
   "DIONYSUSANCIENT-TIPSY_SHOT.flavor": ""

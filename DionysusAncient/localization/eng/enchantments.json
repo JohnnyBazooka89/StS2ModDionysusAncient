@@ -1,0 +1,5 @@
+{
+  "DIONYSUSANCIENT-INTOXICATE.title": "Intoxicate",
+  "DIONYSUSANCIENT-INTOXICATE.description": "Apply [blue]{Amount}[/blue] [gold]Hangover[/gold] to ALL enemies.",
+  "DIONYSUSANCIENT-INTOXICATE.extraCardText": "Intoxicate {Amount}."
+}

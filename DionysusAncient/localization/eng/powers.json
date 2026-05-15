@@ -1,3 +1,5 @@
 {
-  
+  "DIONYSUSANCIENT-HANGOVER_POWER.title": "Hangover",
+  "DIONYSUSANCIENT-HANGOVER_POWER.description": "Hungover creatures take damage at the end of their turn. Each turn, Hangover is reduced by [blue]1[/blue].",
+  "DIONYSUSANCIENT-HANGOVER_POWER.smartDescription": "At the end of its turn, takes [blue]{Amount}[/blue] damage, then reduce [gold]Hangover[/gold] by [blue]1[/blue]."
 }

@@ -2,7 +2,7 @@
 
 ## 📄 Description
 
-This mod introduces a new Ancient, **Dionysus** from the hit game Hades 2, who can appear in Act 2 and offers a selection of Relics that focus on 
+This mod introduces a new Ancient, **Dionysus** from the hit game Hades 2, who can appear in Act 2 and offers a selection of Relics that focus on: applying Hangover, potions, max HP, healing, unpredictable combat effects and other things. 
 
 ## 🌐 Localization
 The mod is available in:

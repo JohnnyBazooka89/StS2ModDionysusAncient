@@ -59,6 +59,12 @@
         <None Include="DionysusAncient/**"/>
     </ItemGroup>
 
+    <ItemGroup>
+        <Content Include="DionysusAncientCode\Hooks\IModifyDamageToFinalValue.cs.uid"/>
+        <Content Include="DionysusAncientCode\Hooks\DionysusHooks.cs.uid"/>
+        <Content Include="DionysusAncientCode\Patches\Hook_ModifyDamage_Patch.cs.uid"/>
+    </ItemGroup>
+
     <Target Name="CheckDependencyPaths">
         <Error
                 Text=" Slay the Spire 2 data not found at path '$(Sts2DataDir)'"

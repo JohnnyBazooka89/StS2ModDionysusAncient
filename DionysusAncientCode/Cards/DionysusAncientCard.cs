@@ -1,6 +1,6 @@
 ﻿using BaseLib.Abstracts;
 using BaseLib.Extensions;
-using DionysusAncient.DionysusAntientCode.Extensions;
+using DionysusAncient.DionysusAncientCode.Extensions;
 using MegaCrit.Sts2.Core.Entities.Cards;
 
 namespace DionysusAncient.DionysusAncientCode.Cards;

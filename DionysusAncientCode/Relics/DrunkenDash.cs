@@ -20,13 +20,13 @@ public class DrunkenDash : DionysusAncientRelic
 
     public override RelicRarity Rarity => RelicRarity.Ancient;
 
-    protected override IEnumerable<DynamicVar> CanonicalVars =>
+    public override IEnumerable<DynamicVar> CanonicalVars =>
     [
         new CardsVar(5),
         new(IntoxicateKey, 4M)
     ];
 
-    protected override IEnumerable<IHoverTip> ExtraHoverTips =>
+    public override IEnumerable<IHoverTip> ExtraHoverTips =>
     [
         ..HoverTipFactory.FromEnchantment<Intoxicate>(DynamicVars[IntoxicateKey].IntValue)
     ];

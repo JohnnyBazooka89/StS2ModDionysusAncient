@@ -1,7 +1,6 @@
-﻿using DionysusAncient.DionysusAncientCode;
-using Godot;
+﻿using Godot;
 
-namespace DionysusAncient.DionysusAntientCode.Extensions;
+namespace DionysusAncient.DionysusAncientCode.Extensions;
 
 //Mostly utilities to get asset paths.
 public static class StringExtensions
@@ -55,7 +54,7 @@ public static class StringExtensions
         DionysusAncientMainFile.Logger.Info("Could not find relic image path: " + path);
         return Path.Join(DionysusAncientMainFile.ResPath, "images", "relics", "relic.png");
     }
-    
+
     public static string RelicOutlineImagePath(this string path)
     {
         path = Path.Join(DionysusAncientMainFile.ResPath, "images", "relics", "outline", path);
@@ -78,7 +77,7 @@ public static class StringExtensions
     {
         return Path.Join(DionysusAncientMainFile.ResPath, "images", "charui", path);
     }
-    
+
     public static string AncientImagePath(this string path)
     {
         return Path.Join(DionysusAncientMainFile.ResPath, "images", "ancients", path);

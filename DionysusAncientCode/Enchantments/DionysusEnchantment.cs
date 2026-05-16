@@ -1,6 +1,6 @@
 ﻿using BaseLib.Abstracts;
 using BaseLib.Extensions;
-using DionysusAncient.DionysusAntientCode.Extensions;
+using DionysusAncient.DionysusAncientCode.Extensions;
 
 namespace DionysusAncient.DionysusAncientCode.Enchantments;
 

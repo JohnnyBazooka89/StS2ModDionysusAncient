@@ -1,8 +1,8 @@
 ﻿using BaseLib.Abstracts;
 using BaseLib.Extensions;
 using BaseLib.Utils;
+using DionysusAncient.DionysusAncientCode.Extensions;
 using DionysusAncient.DionysusAncientCode.Relics;
-using DionysusAncient.DionysusAntientCode.Extensions;
 using MegaCrit.Sts2.Core.Models;
 
 namespace DionysusAncient.DionysusAncientCode.Ancients;

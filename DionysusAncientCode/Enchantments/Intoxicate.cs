@@ -13,7 +13,7 @@ public class Intoxicate : DionysusEnchantment
     public override bool HasExtraCardText => true;
     public override bool ShowAmount => true;
 
-    protected override IEnumerable<IHoverTip> ExtraHoverTips =>
+    public override IEnumerable<IHoverTip> ExtraHoverTips =>
     [
         HoverTipFactory.FromPower<HangoverPower>()
     ];

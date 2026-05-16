@@ -10,5 +10,8 @@
   "DIONYSUSANCIENT-HIGH_TOLERANCE.flavor": "",
   "DIONYSUSANCIENT-TIPSY_SHOT.title": "Tipsy Shot",
   "DIONYSUSANCIENT-TIPSY_SHOT.description": "Whenever you use a potion, its effect is applied an additional time.",
-  "DIONYSUSANCIENT-TIPSY_SHOT.flavor": ""
+  "DIONYSUSANCIENT-TIPSY_SHOT.flavor": "",
+  "DIONYSUSANCIENT-WORRY_FREE.title": "Worry Free",
+  "DIONYSUSANCIENT-WORRY_FREE.description": "Gain a random amount of Max HP between [blue]{MinMaxHp}[/blue] to [blue]{MaxMaxHp}[/blue], but how much HP you have becomes a mystery.",
+  "DIONYSUSANCIENT-WORRY_FREE.flavor": ""
 }

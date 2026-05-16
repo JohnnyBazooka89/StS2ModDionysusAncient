@@ -13,9 +13,6 @@ namespace DionysusAncient.DionysusAncientCode.Patches;
 [HarmonyPatch]
 public static class PotionModel_OnUseWrapper_Patch
 {
-    private static readonly MethodInfo OnUseMethod =
-        AccessTools.Method(typeof(PotionModel), "OnUse");
-
     private static readonly MethodInfo ReplacementMethod =
         AccessTools.Method(
             typeof(PotionModel_OnUseWrapper_Patch),
@@ -83,22 +80,13 @@ public static class PotionModel_OnUseWrapper_Patch
         PlayerChoiceContext choiceContext,
         Creature? target)
     {
-        await InvokeOnUse(potion, choiceContext, target);
+        await potion.OnUse(choiceContext, target);
 
         Player? owner = potion.Owner;
         if (owner?.GetRelic<TipsyShot>() == null)
             return;
 
-        await InvokeOnUse(potion, choiceContext, target);
+        await potion.OnUse(choiceContext, target);
     }
-
-    private static Task InvokeOnUse(
-        PotionModel potion,
-        PlayerChoiceContext choiceContext,
-        Creature? target)
-    {
-        return (Task)OnUseMethod.Invoke(
-            potion,
-            new object?[] { choiceContext, target })!;
-    }
+    
 }

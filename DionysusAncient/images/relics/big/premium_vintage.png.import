@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bg405x38q032w"
-path="res://.godot/imported/relic_outline.png-d5530f954c9d6b5ad0c8e6f4ca8164d7.ctex"
+uid="uid://cudov5fsw7njq"
+path="res://.godot/imported/premium_vintage.png-f8c525d7152a70aa8ed146516df0b610.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://DionysusAncient/images/relics/relic_outline.png"
-dest_files=["res://.godot/imported/relic_outline.png-d5530f954c9d6b5ad0c8e6f4ca8164d7.ctex"]
+source_file="res://DionysusAncient/images/relics/big/premium_vintage.png"
+dest_files=["res://.godot/imported/premium_vintage.png-f8c525d7152a70aa8ed146516df0b610.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cr2h5mf3atybi"
-path="res://.godot/imported/dionysus_placeholder.png-d0c71a5bd4929917fb71b875d7d884d0.ctex"
+uid="uid://bq30kabx6afgw"
+path="res://.godot/imported/reckless_abandon.png-5b604e526825b3c08abdd243d8dc57f4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://DionysusAncient/images/ancients/dionysus_placeholder.png"
-dest_files=["res://.godot/imported/dionysus_placeholder.png-d0c71a5bd4929917fb71b875d7d884d0.ctex"]
+source_file="res://DionysusAncient/images/relics/outline/reckless_abandon.png"
+dest_files=["res://.godot/imported/reckless_abandon.png-5b604e526825b3c08abdd243d8dc57f4.ctex"]
 
 [params]
 

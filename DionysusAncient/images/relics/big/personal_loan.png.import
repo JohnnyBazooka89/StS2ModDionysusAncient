@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cr2h5mf3atybi"
-path="res://.godot/imported/dionysus_placeholder.png-d0c71a5bd4929917fb71b875d7d884d0.ctex"
+uid="uid://d3bgbj1gp5c17"
+path="res://.godot/imported/personal_loan.png-5e6f213f9f09a0f5073d27a015cb828b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://DionysusAncient/images/ancients/dionysus_placeholder.png"
-dest_files=["res://.godot/imported/dionysus_placeholder.png-d0c71a5bd4929917fb71b875d7d884d0.ctex"]
+source_file="res://DionysusAncient/images/relics/big/personal_loan.png"
+dest_files=["res://.godot/imported/personal_loan.png-5e6f213f9f09a0f5073d27a015cb828b.ctex"]
 
 [params]
 

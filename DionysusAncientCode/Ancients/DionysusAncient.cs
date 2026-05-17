@@ -10,7 +10,7 @@ namespace DionysusAncient.DionysusAncientCode.Ancients;
 [Pool(typeof(AncientEventModel))]
 public class DionysusAncient : CustomAncientModel
 {
-    public override string CustomScenePath => "Dionysus.tscn".AncientImagePath();
+    public override string CustomScenePath => "dionysus.tscn".AncientImagePath();
     public override string CustomMapIconPath => "map_icon.png".AncientImagePath();
     public override string CustomMapIconOutlinePath => "map_icon_outline.png".AncientImagePath();
     public override string CustomRunHistoryIconPath => "run_history_icon.png".AncientImagePath();
@@ -22,10 +22,18 @@ public class DionysusAncient : CustomAncientModel
         {
             List<AncientOption> relics =
             [
+                AncientOption<BottomlessDrink>(),
+                AncientOption<BounceBack>(),
                 AncientOption<DrunkenDash>(),
                 AncientOption<DrunkenStupor>(),
+                AncientOption<HappyHaze>(),
                 AncientOption<HighTolerance>(),
+                AncientOption<PersonalLoan>(),
+                AncientOption<PremiumVintage>(),
+                AncientOption<RecklessAbandon>(),
+                AncientOption<StrongDrink>(),
                 AncientOption<TipsyShot>(),
+                AncientOption<WorryFree>(),
             ];
 
             return new OptionPools(

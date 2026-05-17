@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cr2h5mf3atybi"
-path="res://.godot/imported/dionysus_placeholder.png-d0c71a5bd4929917fb71b875d7d884d0.ctex"
+uid="uid://b31o0401gnkjj"
+path="res://.godot/imported/bottomless_drink.png-a5e48f233e67b73eaa2bd5cba5d206fd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://DionysusAncient/images/ancients/dionysus_placeholder.png"
-dest_files=["res://.godot/imported/dionysus_placeholder.png-d0c71a5bd4929917fb71b875d7d884d0.ctex"]
+source_file="res://DionysusAncient/images/relics/outline/bottomless_drink.png"
+dest_files=["res://.godot/imported/bottomless_drink.png-a5e48f233e67b73eaa2bd5cba5d206fd.ctex"]
 
 [params]
 

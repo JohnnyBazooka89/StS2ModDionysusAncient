@@ -11,7 +11,7 @@ namespace DionysusAncient.DionysusAncientCode.Patches;
 public static class NAncientEventLayout_SetDialogueLineAndAnimate_Patch
 {
     private const float XOffset = 140f;
-    private const float YOffset = 68f;
+    private const float YOffset = 65f;
     private const float ScaleAmount = 0.85f;
     private const float OriginalSpacing = 10f;
 

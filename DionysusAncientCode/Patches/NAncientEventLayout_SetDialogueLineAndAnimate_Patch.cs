@@ -10,8 +10,8 @@ namespace DionysusAncient.DionysusAncientCode.Patches;
 [HarmonyPatch(typeof(NAncientEventLayout), "SetDialogueLineAndAnimate")]
 public static class NAncientEventLayout_SetDialogueLineAndAnimate_Patch
 {
-    private const float XOffset = 140f;
-    private const float YOffset = 65f;
+    private const float XOffset = 138f;
+    private const float YOffset = 50f;
     private const float ScaleAmount = 0.85f;
     private const float OriginalSpacing = 10f;
 

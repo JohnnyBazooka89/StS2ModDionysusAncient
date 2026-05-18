@@ -29,19 +29,8 @@ public class BottomlessDrink : DionysusAncientRelic
     {
         if (player != Owner || combatState.RoundNumber != 1)
             return;
-        Flash();
-        foreach (CardModel card in CardFactory.GetForCombat(Owner,
-                     Owner.Character.CardPool
-                         .GetUnlockedCards(Owner.UnlockState,
-                             Owner.RunState.CardMultiplayerConstraint)
-                         .Where(c => c.Type == CardType.Power),
-                     DynamicVars.Cards.IntValue, Owner.RunState.Rng.CombatCardGeneration))
-        {
-            card.SetToFreeThisCombat();
-            CardCmd.PreviewCardPileAdd(await CardPileCmd.AddGeneratedCardToCombat(card, PileType.Draw,
-                Owner, CardPilePosition.Random));
-        }
 
+        Flash();
         foreach (CardModel card in CardFactory.GetForCombat(Owner, Owner.Character.CardPool
                          .GetUnlockedCards(Owner.UnlockState, Owner.RunState.CardMultiplayerConstraint)
                          .Where(c => c.Type == CardType.Power),

@@ -1,9 +1,9 @@
 {
   "DIONYSUSANCIENT-BOTTOMLESS_DRINK.title": "Bottomless Drink",
-  "DIONYSUSANCIENT-BOTTOMLESS_DRINK.description": "At the start of combat, shuffle {Cards:diff()} random Power cards into your [gold]Draw Pile[/gold]. They're free to play this combat.",
+  "DIONYSUSANCIENT-BOTTOMLESS_DRINK.description": "At the start of each combat, shuffle [blue]{Cards:diff()}[/blue] random Power cards into your [gold]Draw Pile[/gold]. They're free to play this combat.",
   "DIONYSUSANCIENT-BOTTOMLESS_DRINK.flavor": "\"Enjoying that one, yeah? Well we've got plenty more, just let me know!\"",
   "DIONYSUSANCIENT-BOUNCE_BACK.title": "Bounce Back",
-  "DIONYSUSANCIENT-BOUNCE_BACK.description": "Start each combat with {RegenPower} [gold]Regen[/gold].",
+  "DIONYSUSANCIENT-BOUNCE_BACK.description": "Start each combat with [blue]{RegenPower}[/blue] [gold]Regen[/gold].",
   "DIONYSUSANCIENT-BOUNCE_BACK.flavor": "\"I mean really, what's to fear from Titans, are they gonna rip me up limb from limb? Well I can't die man, I'll just put myself together ... and then have another drink!\"",
   "DIONYSUSANCIENT-CHARONS_OBOL.title": "Charon's Obol",
   "DIONYSUSANCIENT-CHARONS_OBOL.description": "Your next Question Mark room is guaranteed to be a Shop.",
@@ -15,7 +15,7 @@
   "DIONYSUSANCIENT-DRUNKEN_STUPOR.description": "Whenever you play a Power card, apply [blue]{HangoverPower}[/blue] [gold]Hangover[/gold] to ALL enemies.",
   "DIONYSUSANCIENT-DRUNKEN_STUPOR.flavor": "\"So I say, can't we just, wait ... have I not already told this one before? You'll tell me if I did? Or if you don't remember, that's cool! Neither do I, haha. What were we on about?\"",
   "DIONYSUSANCIENT-HAPPY_HAZE.title": "Happy Haze",
-  "DIONYSUSANCIENT-HAPPY_HAZE.description": "At the start of your [blue]3rd[/blue] turn, gain [blue]{StrengthPower}[/blue] [gold]Strength[/gold], [blue]{DexterityPower}[/blue] [gold]Dexterity[/gold], and [blue]{FocusPower}[/blue] [gold]Focus[/gold].",
+  "DIONYSUSANCIENT-HAPPY_HAZE.description": "At the start of your [blue]3rd[/blue] turn, gain [blue]{StrengthPower}[/blue] [gold]Strength[/gold], [blue]{DexterityPower}[/blue] [gold]Dexterity[/gold], and if you have Orb Slots, also [blue]{FocusPower}[/blue] [gold]Focus[/gold].",
   "DIONYSUSANCIENT-HAPPY_HAZE.flavor": "\"All right, come on now, I don't even want to know what's happening out there. What's really happening is here!\"",
   "DIONYSUSANCIENT-HIGH_TOLERANCE.title": "High Tolerance",
   "DIONYSUSANCIENT-HIGH_TOLERANCE.description": "Gain {Energy:energyIcons()} at the start of each turn. Start each combat with [blue]{HangoverPower}[/blue] [gold]Hangover[/gold].",
@@ -38,6 +38,6 @@
   "DIONYSUSANCIENT-TIPSY_SHOT.description": "Whenever you use a potion, its effect is applied an additional time.",
   "DIONYSUSANCIENT-TIPSY_SHOT.flavor": "\"... another round, you say? Well I don't see why not! Ah, haha!\"",
   "DIONYSUSANCIENT-WORRY_FREE.title": "Worry Free",
-  "DIONYSUSANCIENT-WORRY_FREE.description": "Gain a random amount of Max HP between [blue]{MinMaxHp}[/blue] to [blue]{MaxMaxHp}[/blue], but how much HP you have becomes a mystery.",
+  "DIONYSUSANCIENT-WORRY_FREE.description": "Gain a random amount of Max HP between [blue]{MinMaxHp}[/blue] to [blue]{MaxMaxHp}[/blue]. Future healing effects are randomized between [blue]{MinHealingPercent}%[/blue] and [blue]{MaxHealingPercent}%[/blue] effectiveness.",
   "DIONYSUSANCIENT-WORRY_FREE.flavor": "\"Hey look man let's not talk about that sort of thing in here, let's just relax! No need to get all down about that stuff!\""
 }

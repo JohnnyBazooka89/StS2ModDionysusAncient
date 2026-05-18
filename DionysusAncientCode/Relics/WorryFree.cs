@@ -1,4 +1,4 @@
-﻿using System.Reflection;
+﻿using BaseLib.Hooks;
 using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Creatures;
@@ -9,10 +9,12 @@ using MegaCrit.Sts2.Core.Models.RelicPools;
 namespace DionysusAncient.DionysusAncientCode.Relics;
 
 [Pool(typeof(EventRelicPool))]
-public class WorryFree : DionysusAncientRelic
+public class WorryFree : DionysusAncientRelic, IHealAmountModifier
 {
     private const string MinMaxHpKey = "MinMaxHp";
     private const string MaxMaxHpKey = "MaxMaxHp";
+    private const string MinHealingPercentKey = "MinHealingPercent";
+    private const string MaxHealingPercentKey = "MaxHealingPercent";
 
     public override RelicRarity Rarity => RelicRarity.Ancient;
 
@@ -20,13 +22,28 @@ public class WorryFree : DionysusAncientRelic
     [
         new(MinMaxHpKey, 40M),
         new(MaxMaxHpKey, 60M),
+        new(MinHealingPercentKey, 50M),
+        new(MaxHealingPercentKey, 100M),
     ];
+
+    public Decimal ModifyHealMultiplicative(Creature creature, Decimal amount)
+    {
+        if (creature.Player != Owner || RandomHealSuppressor.SuppressRandomHeal)
+        {
+            return 1;
+        }
+
+        Flash();
+        int randomHealingPercent = Owner.RunState.Rng.Niche.NextInt(
+            DynamicVars[MinHealingPercentKey].IntValue,
+            DynamicVars[MaxHealingPercentKey].IntValue + 1
+        );
+        return randomHealingPercent / 100M;
+    }
 
     public override async Task AfterObtained()
     {
-        RefreshCurrentAndMaxHp();
-
-        await HealAnimSuppressor.Run(async () =>
+        await RandomHealSuppressor.Run(async () =>
         {
             await CreatureCmd.GainMaxHp(
                 Owner.Creature,
@@ -38,32 +55,14 @@ public class WorryFree : DionysusAncientRelic
         });
     }
 
-    public override async Task AfterRemoved()
+    public static class RandomHealSuppressor
     {
-        RefreshCurrentAndMaxHp();
-    }
-
-    private void RefreshCurrentAndMaxHp()
-    {
-        var field = typeof(Creature).GetField(
-            "CurrentHpChanged",
-            BindingFlags.Instance | BindingFlags.NonPublic);
-
-        var del = (Action<int, int>?)field?.GetValue(Owner.Creature);
-
-        del?.Invoke(Owner.Creature.CurrentHp, Owner.Creature.MaxHp);
-
-        Owner.Creature.GetCreatureNode()?._stateDisplay.RefreshValues();
-    }
-
-    public static class HealAnimSuppressor
-    {
-        [field: ThreadStatic] public static bool SuppressHealAnim { get; private set; }
+        [field: ThreadStatic] public static bool SuppressRandomHeal { get; private set; }
 
         public static async Task Run(Func<Task> action)
         {
-            bool previous = SuppressHealAnim;
-            SuppressHealAnim = true;
+            bool previous = SuppressRandomHeal;
+            SuppressRandomHeal = true;
 
             try
             {
@@ -71,7 +70,7 @@ public class WorryFree : DionysusAncientRelic
             }
             finally
             {
-                SuppressHealAnim = previous;
+                SuppressRandomHeal = previous;
             }
         }
     }

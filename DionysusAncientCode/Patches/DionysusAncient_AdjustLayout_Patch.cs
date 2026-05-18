@@ -8,7 +8,7 @@ using MegaCrit.Sts2.Core.Nodes.Events;
 namespace DionysusAncient.DionysusAncientCode.Patches;
 
 [HarmonyPatch(typeof(NAncientEventLayout), "SetDialogueLineAndAnimate")]
-public static class NAncientEventLayout_SetDialogueLineAndAnimate_Patch
+public static class DionysusAncient_AdjustLayout_Patch
 {
     private const float XOffset = 138f;
     private const float YOffset = 50f;
@@ -81,7 +81,7 @@ public static class NAncientEventLayout_SetDialogueLineAndAnimate_Patch
                 yield return new CodeInstruction(OpCodes.Ldarg_0);
                 yield return new CodeInstruction(OpCodes.Ldc_R4, OriginalSpacing);
                 yield return CodeInstruction.Call(
-                    typeof(NAncientEventLayout_SetDialogueLineAndAnimate_Patch),
+                    typeof(DionysusAncient_AdjustLayout_Patch),
                     nameof(GetSpacingForEvent)
                 );
             }

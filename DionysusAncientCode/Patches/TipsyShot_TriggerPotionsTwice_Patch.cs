@@ -11,11 +11,11 @@ using MegaCrit.Sts2.Core.Models;
 namespace DionysusAncient.DionysusAncientCode.Patches;
 
 [HarmonyPatch]
-public static class PotionModel_OnUseWrapper_Patch
+public static class TipsyShot_TriggerPotionsTwice_Patch
 {
     private static readonly MethodInfo ReplacementMethod =
         AccessTools.Method(
-            typeof(PotionModel_OnUseWrapper_Patch),
+            typeof(TipsyShot_TriggerPotionsTwice_Patch),
             nameof(CallOnUseMaybeTwice));
 
     static MethodBase TargetMethod()
@@ -88,5 +88,4 @@ public static class PotionModel_OnUseWrapper_Patch
 
         await potion.OnUse(choiceContext, target);
     }
-    
 }

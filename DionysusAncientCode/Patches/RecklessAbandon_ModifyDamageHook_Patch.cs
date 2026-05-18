@@ -11,7 +11,7 @@ using MegaCrit.Sts2.Core.ValueProps;
 namespace DionysusAncient.DionysusAncientCode.Patches;
 
 [HarmonyPatch(typeof(Hook), nameof(Hook.ModifyDamage))]
-public static class Hook_ModifyDamage_Patch
+public static class RecklessAbandon_ModifyDamageHook_Patch
 {
     static void Postfix(
         IRunState? runState,

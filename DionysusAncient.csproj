@@ -28,7 +28,7 @@
     </ItemGroup>
 
     <ItemGroup Condition="True"> <!--Allows access to originally private/protected members but may (unlikely to) cause errors.-->
-        <Publicize Include="sts2" IncludeVirtualMembers="true" IncludeCompilerGeneratedMembers="false"/>
+        <Publicize Include="sts2" IncludeVirtualMembers="true" IncludeCompilerGeneratedMembers="true"/>
     </ItemGroup>
 
     <ItemGroup>

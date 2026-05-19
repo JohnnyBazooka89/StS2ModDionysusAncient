@@ -10,7 +10,7 @@ namespace DionysusAncient.DionysusAncientCode.Powers;
 
 public class HangoverPower : DionysusAncientPower
 {
-    private static readonly Color Color = new(122 / 255f, 46 / 255f, 138 / 255f);
+    private static readonly Color Color = new(141 / 255f, 53 / 255f, 158 / 255f);
 
     public override PowerType Type => PowerType.Debuff;
 
@@ -32,6 +32,10 @@ public class HangoverPower : DionysusAncientPower
 
     public override IEnumerable<HealthBarForecastSegment> GetHealthBarForecastSegments(HealthBarForecastContext context)
     {
-        return [new HealthBarForecastSegment(Amount, Color, HealthBarForecastDirection.FromRight)];
+        return
+        [
+            new HealthBarForecastSegment(Math.Max(0, Amount - context.Creature.Block), Color,
+                HealthBarForecastDirection.FromRight)
+        ];
     }
 }

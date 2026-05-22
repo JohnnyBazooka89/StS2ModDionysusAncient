@@ -3,14 +3,14 @@
   "name": "Dionysus Ancient",
   "author": "JohnnyBazooka89",
   "description": "This mod adds Dionysus from the hit game Hades 2 as a new Ancient.",
-  "version": "v0.2.1",
+  "version": "v0.2.2",
   "has_pck": true,
   "has_dll": true,
-  "min_game_version": "v0.105.0",
+  "min_game_version": "v0.106.0",
   "dependencies": [
     {
       "id": "BaseLib",
-      "min_version": "v3.1.3"
+      "min_version": "v3.1.4"
     }
   ],
   "affects_gameplay": true

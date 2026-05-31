@@ -24,28 +24,36 @@ public class DionysusHooks
         ValueProp props, Creature? dealer, CardModel? cardSource, CardPreviewMode previewMode,
         ref IEnumerable<AbstractModel> modifiers)
     {
+        Boolean changed = false;
         foreach (IModifyDamageToFinalValue model in runState?.IterateHookListeners(combatState)
                      .OfType<IModifyDamageToFinalValue>() ?? [])
         {
             decimal num = model.ModifyDamageToFinalValue(target, amount, props, dealer, cardSource, previewMode);
-            if (model is AbstractModel abstractModel && num != amount)
+            if (num != amount)
             {
-                modifiers = modifiers.Append(abstractModel);
-            }
+                if (model is AbstractModel abstractModel)
+                {
+                    modifiers = modifiers.Append(abstractModel);
+                }
 
-            amount = num;
+                amount = num;
+                changed = true;
+            }
         }
 
-        Decimal cappedDamage = Decimal.MaxValue;
-        foreach (AbstractModel iterateHookListener in runState.IterateHookListeners(combatState))
+        if (changed)
         {
-            Decimal capToCompare = iterateHookListener.ModifyDamageCap(target, props, dealer, cardSource);
-            if (capToCompare < cappedDamage)
+            Decimal cappedDamage = Decimal.MaxValue;
+            foreach (AbstractModel iterateHookListener in runState.IterateHookListeners(combatState))
             {
-                cappedDamage = capToCompare;
-                if (amount > cappedDamage)
+                Decimal capToCompare = iterateHookListener.ModifyDamageCap(target, props, dealer, cardSource);
+                if (capToCompare < cappedDamage)
                 {
-                    amount = cappedDamage;
+                    cappedDamage = capToCompare;
+                    if (amount > cappedDamage)
+                    {
+                        amount = cappedDamage;
+                    }
                 }
             }
         }

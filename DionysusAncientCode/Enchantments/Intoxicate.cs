@@ -29,7 +29,7 @@ public class Intoxicate : DionysusEnchantment
 
         IEnumerable<Creature> targets = Card.Owner.Creature.CombatState.GetOpponentsOf(Card.Owner.Creature)
             .Where(c => c.IsAlive);
-        await PowerCmd.Apply<HangoverPower>(new ThrowingPlayerChoiceContext(), targets,
+        await PowerCmd.Apply<HangoverPower>(choiceContext, targets,
             Amount, null, null);
     }
 }

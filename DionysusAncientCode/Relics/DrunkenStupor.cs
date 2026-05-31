@@ -38,7 +38,7 @@ public class DrunkenStupor : DionysusAncientRelic
         IEnumerable<Creature> targets = Owner.Creature.CombatState.GetOpponentsOf(Owner.Creature)
             .Where(c => c.IsAlive);
         Flash();
-        await PowerCmd.Apply<HangoverPower>(new ThrowingPlayerChoiceContext(), targets,
+        await PowerCmd.Apply<HangoverPower>(choiceContext, targets,
             DynamicVars["HangoverPower"].BaseValue, null, null);
     }
 }

@@ -1,5 +1,6 @@
 ﻿using BaseLib.Cards.Variables;
 using BaseLib.Utils;
+using DionysusAncient.DionysusAncientCode.Vars;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Relics;
 using MegaCrit.Sts2.Core.HoverTips;
@@ -53,7 +54,7 @@ public class PersonalLoan : DionysusAncientRelic
         new GoldVar(1250),
         new(TotalGoldKey + "Base", 0M),
         new(TotalGoldKey + "Extra", 1M),
-        new CustomCalculatedVar(TotalGoldKey).WithMultiplier((relic, _) =>
+        new OutsideCombatCalculatedVar(TotalGoldKey).WithMultiplier((relic, _) =>
         {
             int lentMoney = relic is PersonalLoan personalLoan ? personalLoan.LentMoney : 0;
             return lentMoney + relic.DynamicVars.Gold.IntValue;
@@ -82,7 +83,7 @@ public class PersonalLoan : DionysusAncientRelic
 
         WasUsed = true;
         room.AddExtraReward(Owner,
-            new GoldReward((int)((CustomCalculatedVar)DynamicVars[TotalGoldKey]).CalculateCustom(null), Owner));
+            new GoldReward((int)((OutsideCombatCalculatedVar)DynamicVars[TotalGoldKey]).CalculateCustom(null), Owner));
         room.AddExtraReward(Owner, new RelicReward(ModelDb.Relic<CharonsObol>().ToMutable(), Owner));
 
         return Task.CompletedTask;
